@@ -7,6 +7,11 @@
     "authors": [
         "kaylendog (Kaylen) <actuallyori@gmail.com>"
     ],
+    "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/rebrand",
+        "sources": "https://github.com/kaylendog/rebrand/"
+    },
+    "icon": "assets/rebrand/icon.png",
     "license": "GPL-3.0-or-later",
     "environment": "client",
     "entrypoints": {
