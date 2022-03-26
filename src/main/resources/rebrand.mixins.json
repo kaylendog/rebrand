@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "dog.kaylen.rebrand.mixins",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [],
+    "client": [
+      "ClientBrandRetrieverMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

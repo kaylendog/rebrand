@@ -1,0 +1,27 @@
+{
+    "schemaVersion": 1,
+    "id": "rebrand",
+    "version": "${version}",
+    "name": "Rebrand",
+    "description": "Customize your client brand sent to multiplayer servers.",
+    "authors": [
+        "kaylendog (Kaylen) <actuallyori@gmail.com>"
+    ],
+    "license": "GPL-3.0-or-later",
+    "environment": "client",
+    "entrypoints": {
+        "client": ["dog.kaylen.rebrand.RebrandClientMod"],
+        "modmenu": ["dog.kaylen.rebrand.modmenu.RebrandModMenu"]
+    },
+    "mixins": [
+        "rebrand.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.13.3",
+        "minecraft": "1.18.x",
+        "java": ">=17"
+    },
+    "suggests": {
+        "modmenu": ">=3"
+    }
+}
