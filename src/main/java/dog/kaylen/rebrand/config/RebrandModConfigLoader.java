@@ -49,15 +49,17 @@ public class RebrandModConfigLoader {
 	}
 	/**
 	 * Save the in-memory config to disk
+	 * 
 	 * @return True if the action was successful, false otherwise.
 	 */
 	public static Boolean saveConfig() {
 		RebrandClientMod.getInstance().getLogger().info("Saving configuration to disk...");
-		RebrandClientMod.getInstance().getLogger().info("Brand name = " + RebrandClientMod.getInstance().getConfig().brandName);
+		RebrandClientMod.getInstance().getLogger()
+				.info("Brand name = " + RebrandClientMod.getInstance().getConfig().brandName);
 		File file = FabricLoader.getInstance().getConfigDir().resolve(CONFIG_NAME).toFile();
 		try {
 			TOML_WRITER.write(RebrandClientMod.getInstance().getConfig(), file);
-		} catch(IOException ex) {
+		} catch (IOException ex) {
 			RebrandClientMod.getInstance().getLogger().error("Failed to save configuration to disk - more info below");
 			RebrandClientMod.getInstance().getLogger().error(ex);
 			return false;
