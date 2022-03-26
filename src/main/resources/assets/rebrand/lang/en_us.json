@@ -1,0 +1,8 @@
+{
+    "title.rebrand.config": "Rebrand Configuration",
+    "category.rebrand.general": "General",
+    "option.rebrand.enable": "Enable Rebrand",
+    "option.rebrand.brandName": "Custom brand name",
+    "tooltip.rebrand.enable": "Enables and disables Rebrand from hiding your client brand name.",
+    "tooltip.rebrand.brandName": "The custom brand name to send to multiplayer servers when connecting."
+}

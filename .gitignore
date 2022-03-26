@@ -47,3 +47,6 @@ gradle-app.setting
 
 # fabric client directory
 run/
+
+# intellij project config
+.idea/
