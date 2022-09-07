@@ -4,12 +4,16 @@
     "version": "${version}",
     "name": "Rebrand",
     "description": "Customize your client brand sent to multiplayer servers.",
-    "authors": [
-        "kaylendog (Kaylen) <actuallyori@gmail.com>"
-    ],
+    "authors": [{
+        "name": "Kaylen Dart",
+        "contact": {
+            "email": "actuallyori@gmail.com"
+        }
+    }],
     "contact": {
         "homepage": "https://www.curseforge.com/minecraft/mc-mods/rebrand",
-        "sources": "https://github.com/kaylendog/rebrand/"
+        "sources": "https://github.com/kaylendog/rebrand/",
+        "issues": "https://github.com/kaylendog/rebrand/issues"
     },
     "icon": "assets/rebrand/icon.png",
     "license": "GPL-3.0-or-later",
