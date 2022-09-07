@@ -1,7 +1,6 @@
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
-    id 'maven-publish'
-    id "com.diffplug.spotless" version "6.3.0"
+    id "fabric-loom" version "1.0-SNAPSHOT"
+    id "com.diffplug.spotless" version "6.10.0"
 }
 
 version = project.mod_version
@@ -20,13 +19,13 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     // cloth api
-    modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.57") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:8.1.77") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     // mod menu
-    modImplementation "com.terraformersmc:modmenu:3.1.0"
+    modImplementation "com.terraformersmc:modmenu:4.0.6"
     // toml library
-    include 'com.moandjiezana.toml:toml4j:0.7.2'
+    include "com.moandjiezana.toml:toml4j:0.7.2"
 }
 
 processResources {
@@ -65,29 +64,6 @@ java {
 jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
-    }
-}
-
-// configure the maven publication
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            // add all the jars that should be included when publishing to maven
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
-        }
-    }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
     }
 }
 
