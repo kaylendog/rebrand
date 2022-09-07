@@ -22,7 +22,7 @@
         "rebrand.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14.3",
+        "fabricloader": ">=0.14",
         "minecraft": "1.19.x",
         "java": ">=17"
     },
