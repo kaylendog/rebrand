@@ -6,32 +6,25 @@ package dog.kaylen.rebrand.mixins;
 
 import dog.kaylen.rebrand.RebrandClientMod;
 import dog.kaylen.rebrand.config.RebrandModConfig;
-import net.minecraft.client.ClientBrandRetriever;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.packet.c2s.login.LoginQueryResponseC2SPacket;
-import net.minecraft.network.packet.s2c.login.LoginQueryRequestS2CPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-/**
- * Injects the desired client brand into the ClientBrandRetriever.
- */
-@Mixin(ClientBrandRetriever.class)
-public class ClientBrandRetrieverMixin {
-	@Inject(at = @At("HEAD"), method = "getClientModName", cancellable = true, remap = false)
-	private static void getConfiguredClientBrand(CallbackInfoReturnable<String> info) {
-		// prevent npe on client initialization
+@Mixin(LoginQueryResponseC2SPacket.class)
+public class LoginQueryResponseC2SPacketMixin {
+	@Inject(at = @At("TAIL"), method = "getResponse", cancellable = true, remap = false)
+	private void getResponse(CallbackInfoReturnable<PacketByteBuf> info) {
+		// default to ghost mode if the mod is not initialized - shouldn't occur!
 		if (RebrandClientMod.getInstance() == null) {
-			info.setReturnValue("fabric");
-			return;
+			info.setReturnValue(null);
 		}
 		RebrandModConfig config = RebrandClientMod.getInstance().getConfig();
-		// if custom brand is not enabled, return before setting
-		if (!config.enable) {
+		if (!config.enable || !config.ghostMode) {
 			return;
 		}
-		info.setReturnValue(config.brandName);
+		info.setReturnValue(null);
 	}
-
 }

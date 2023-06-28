@@ -1,6 +1,6 @@
 plugins {
-    id "fabric-loom" version "1.0-SNAPSHOT"
-    id "com.diffplug.spotless" version "6.18.0"
+    id "fabric-loom" version "1.2-SNAPSHOT"
+    id "com.diffplug.spotless" version "6.19.0"
 }
 
 version = project.mod_version
@@ -19,12 +19,13 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     // cloth api
-    modApi("me.shedaniel.cloth:cloth-config-fabric:10.0.96") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:11.0.99") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     // mod menu
-    modImplementation "com.terraformersmc:modmenu:6.2.2"
+    modImplementation "com.terraformersmc:modmenu:7.1.0"
     // toml library
+    implementation "com.moandjiezana.toml:toml4j:0.7.2"
     include "com.moandjiezana.toml:toml4j:0.7.2"
 }
 

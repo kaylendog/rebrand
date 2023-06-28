@@ -16,4 +16,10 @@ public class RebrandModConfig {
 	 * Enables the sending of the custom brand.
 	 */
 	public Boolean enable = true;
+
+	/**
+	 * Enables ghost mode. This disables the custom plugin login flow used by
+	 * various mod loaders to test for active mods.
+	 */
+	public Boolean ghostMode = false;
 }
