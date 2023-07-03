@@ -1,0 +1,10 @@
+{
+    "title.rebrand.config": "Configuración de Rebrand",
+    "category.rebrand.general": "General",
+    "option.rebrand.enable": "Habilita Rebrand",
+    "option.rebrand.brandName": "Personalizar nombre de marca",
+    "option.rebrand.ghostMode": "Habilita Modo Fantasma",
+    "tooltip.rebrand.enable": "Habilita y deshabilita Rebrand para que oculte el nombre de la marca de tu cliente.",
+    "tooltip.rebrand.brandName": "El nombre de marca (brand) personalizada para enviar a los servidores multijugador al conectarse.",
+    "tooltip.rebrand.ghostMode": "Habilita y deshabilita el Modo Fantasma, que obliga al cliente a actuar como un cliente normal durante el protocolo de enlace de inicio de sesión. Esto romperá los servidores multijugador con mods."
+}
