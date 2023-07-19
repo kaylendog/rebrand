@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LoginQueryResponseC2SPacket.class)
 public class LoginQueryResponseC2SPacketMixin {
-	@Inject(at = @At("TAIL"), method = "getResponse", cancellable = true, remap = false)
+	@Inject(at = @At("TAIL"), method = "getResponse()Lnet/minecraft/network/PacketByteBuf;")
 	private void getResponse(CallbackInfoReturnable<PacketByteBuf> info) {
 		// default to ghost mode if the mod is not initialized - shouldn't occur!
 		if (RebrandClientMod.getInstance() == null) {
