@@ -19,11 +19,11 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     // cloth api
-    modApi("me.shedaniel.cloth:cloth-config-fabric:8.3.103") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:9.1.104") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     // mod menu
-    modImplementation "com.terraformersmc:modmenu:4.1.2"
+    modImplementation "com.terraformersmc:modmenu:5.1.0"
     // toml library
     implementation "com.moandjiezana.toml:toml4j:0.7.2"
     include "com.moandjiezana.toml:toml4j:0.7.2"
