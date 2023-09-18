@@ -43,6 +43,13 @@ public class RebrandModMenu implements ModMenuApi {
 					.setDefaultValue(DEFAULTS.brandName).setTooltip(Text.translatable("tooltip.rebrand.brandName"))
 					.setSaveConsumer(newValue -> RebrandClientMod.getInstance().getConfig().brandName = newValue)
 					.build());
+			// add the ghost mode config
+			general.addEntry(entryBuilder
+					.startBooleanToggle(Text.translatable("option.rebrand.ghostMode"),
+							RebrandClientMod.getInstance().getConfig().ghostMode)
+					.setDefaultValue(DEFAULTS.ghostMode).setTooltip(Text.translatable("tooltip.rebrand.ghostMode"))
+					.setSaveConsumer(newValue -> RebrandClientMod.getInstance().getConfig().ghostMode = newValue)
+					.build());
 			// save the config
 			builder.setSavingRunnable(RebrandModConfigLoader::saveConfig);
 			return builder.build();
