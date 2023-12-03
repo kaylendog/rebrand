@@ -8,6 +8,7 @@ import dog.kaylen.rebrand.RebrandClientMod;
 import dog.kaylen.rebrand.config.RebrandModConfig;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.packet.c2s.login.LoginQueryResponseC2SPacket;
+import net.minecraft.network.packet.c2s.login.LoginQueryResponsePayload;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,8 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LoginQueryResponseC2SPacket.class)
 public class LoginQueryResponseC2SPacketMixin {
-	@Inject(at = @At("TAIL"), method = "getResponse()Lnet/minecraft/network/PacketByteBuf;")
-	private void getResponse(CallbackInfoReturnable<PacketByteBuf> info) {
+	@Inject(at = @At("TAIL"), method = "response()Lnet/minecraft/network/packet/c2s/login/LoginQueryResponsePayload;")
+	private void response(CallbackInfoReturnable<LoginQueryResponsePayload> info) {
 		// default to ghost mode if the mod is not initialized - shouldn't occur!
 		if (RebrandClientMod.getInstance() == null) {
 			info.setReturnValue(null);
@@ -27,4 +28,5 @@ public class LoginQueryResponseC2SPacketMixin {
 		}
 		info.setReturnValue(null);
 	}
+
 }
