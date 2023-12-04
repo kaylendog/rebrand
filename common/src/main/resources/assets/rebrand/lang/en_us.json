@@ -1,0 +1,10 @@
+{
+    "title.rebrand.config": "Rebrand Configuration",
+    "option.rebrand.ghostMode": "Enable Ghost Mode",
+    "tooltip.rebrand.ghostMode": "Enables and disables Ghost Mode, which forces the client to act like a vanilla client during the login handshake. This will break multiplayer modded servers.",
+    "tooltip.rebrand.enable": "Enables and disables Rebrand from hiding your client brand name.",
+    "option.rebrand.enable": "Enable Rebrand",
+    "tooltip.rebrand.brandName": "The custom brand name to send to multiplayer servers when connecting.",
+    "category.rebrand.general": "General",
+    "option.rebrand.brandName": "Custom brand name"
+}

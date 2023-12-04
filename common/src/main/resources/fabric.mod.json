@@ -1,0 +1,43 @@
+{
+    "schemaVersion": 1,
+    "id": "rebrand",
+    "version": "${version}+${minecraft_version}",
+    "name": "Rebrand",
+    "description": "Customize your client brand sent to multiplayer servers.",
+    "authors": [
+        {
+            "name": "Kaylen Dart",
+            "contact": {
+                "email": "actuallyori@gmail.com"
+            }
+        }
+    ],
+    "contributors": [
+        "RazrCraft"
+    ],
+    "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/rebrand",
+        "sources": "https://github.com/kaylendog/rebrand/",
+        "issues": "https://github.com/kaylendog/rebrand/issues"
+    },
+    "icon": "assets/rebrand/icon.png",
+    "license": "GPL-3.0-or-later",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "dog.kaylen.rebrand.RebrandClientMod"
+        ],
+        "modmenu": [
+            "dog.kaylen.rebrand.modmenu.RebrandModMenu"
+        ]
+    },
+    "mixins": [],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "minecraft": "${minecraft_version}",
+        "java": ">=17"
+    },
+    "suggests": {
+        "modmenu": ">=6"
+    }
+}

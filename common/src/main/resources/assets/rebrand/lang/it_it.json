@@ -1,0 +1,10 @@
+{
+    "title.rebrand.config": "Configurazione di Rebrand",
+    "option.rebrand.ghostMode": "Abilita la modalità Fantasma",
+    "tooltip.rebrand.ghostMode": "Abilita e disabilita la modalità Fantasma, che costringe il client a comportarsi come un client vanilla durante l'handshake di login. Questo rompe i server moddati multigiocatore.",
+    "tooltip.rebrand.enable": "Abilita e disabilita Rebrand dal nascondere il marchio del tuo client.",
+    "option.rebrand.enable": "Abilita Rebrand",
+    "tooltip.rebrand.brandName": "Il nome del marchio personalizzato da inviare ai server multigiocatore al momento della connessione.",
+    "category.rebrand.general": "Generale",
+    "option.rebrand.brandName": "Personalizzare il nome del marchio"
+}
