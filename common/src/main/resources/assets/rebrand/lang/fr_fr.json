@@ -1,0 +1,8 @@
+{
+    "title.rebrand.config": "Configuration de Rebranding",
+    "tooltip.rebrand.enable": "Active ou désactive le Rebranding pour masquer le nom de marque de votre client.",
+    "option.rebrand.enable": "Activer le Rebranding",
+    "tooltip.rebrand.brandName": "Le nom de marque personnalisé à envoyer aux serveurs multijoueurs lors de la connexion.",
+    "category.rebrand.general": "Général",
+    "option.rebrand.brandName": "Nom de marque personnalisé"
+}
