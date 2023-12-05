@@ -11,7 +11,10 @@
         }
     }],
     "contributors": [
-        "RazrCraft"
+        "RazrCraft",
+        "Calvineries",
+        "iffyspeak-chroma",
+        "Nukecraft5419"
     ],
     "contact": {
         "homepage": "https://www.curseforge.com/minecraft/mc-mods/rebrand",
@@ -34,6 +37,6 @@
         "java": ">=17"
     },
     "suggests": {
-        "modmenu": ">=6"
+        "modmenu": ">=7"
     }
 }
